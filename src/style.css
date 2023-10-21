@@ -27,7 +27,7 @@ h1 {
   display: flex;
   flex-direction: column;
   width: 1200px;
-  max-width: 95%;
+  max-width: 100%;
   margin: 50px auto;
 }
 
@@ -100,7 +100,8 @@ div.overlay {
 }
 
 .readingList {
-  max-width: 350px;
+  width: 350px;
+  max-width: 90%;
   margin: 50px auto 0;
   height: 400px;
   border: 1px solid #4D5656;
@@ -121,7 +122,7 @@ div.overlay {
 
 .listItem {
   width: 140px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -167,6 +168,14 @@ div.overlay {
   position: absolute;
   right: -6px;
   top: -8px;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 /* width */
@@ -235,6 +244,6 @@ div.overlay {
   }
 
   .readingList {
-    min-width: 300px;
+    min-width: 350px;
   }
 }

@@ -3,6 +3,7 @@ import './style.css';
 import BooksList from './components/BooksList';
 import data from './books.json';
 import ReadingList from './components/ReadingList';
+import Filters from './components/Filters';
 
 export default function App() {
   const [books, setBooks] = useState(data.library);
@@ -26,12 +27,16 @@ export default function App() {
     setReadingList(newList);
   }
 
+  const genresSet = new Set(books.map(book => book.book.genre));
+  const genres = Array.from(genresSet);
+
   return (
     <>
       <h1>{books.length} disponibles en la lista</h1>
       {readingList.length > 0 && (
         <p className='subtitle'>{readingList.length} en la lista de lectura</p>
       )}
+      <Filters genres={genres} />
       <div className='content'>
         <BooksList books={books} addBookToList={addBookToList} />
         {readingList.length > 0 && (
