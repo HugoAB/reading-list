@@ -39,7 +39,7 @@ h1 {
 }
 
 .bookItem {
-  min-width: 165px;
+  min-width: 155px;
   width: 300px;
   max-width: 80%;
   margin-bottom: 20px;
@@ -100,7 +100,7 @@ div.overlay {
 }
 
 .readingList {
-  width: 350px;
+  width: 500px;
   max-width: 90%;
   margin: 50px auto 0;
   height: 400px;
@@ -116,8 +116,9 @@ div.overlay {
 
 .list {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .listItem {
@@ -172,10 +173,23 @@ div.overlay {
 
 .filters {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 30px;
   margin-top: 30px;
+}
+
+.genresFilter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagesFilter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 /* width */
@@ -217,14 +231,18 @@ div.overlay {
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .filters {
+    flex-direction: row;
   }
 }
 
 @media (min-width: 480px) {
   .booksList {
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     gap: 24px;
   }
